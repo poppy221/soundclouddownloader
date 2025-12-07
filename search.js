@@ -5,7 +5,6 @@ async function searchSoundcloud(query) {
     "accept": "application/json, text/javascript etc, */*; q=0.01",
     "accept-encoding": "gzip, deflate, br, zstd",
     "accept-language": "en-US,en;q=0.5",
-    "authorization": process.env.SOUNDCLOUD_TOKEN,
     "connection": "keep-alive",
     "host": "api-v2.soundcloud.com",
     "origin": "https://soundcloud.com",
