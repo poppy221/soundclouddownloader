@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SoundCloud Downloader</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body class="bg-gray-100 min-h-screen flex flex-col items-center p-8">
+    <!-- Header -->
+    <header class="w-full max-w-xl text-center mb-6 flex flex-col items-center space-y-4">
+      <h1 class="text-3xl font-bold text-gray-900">SoundCloud Downloader</h1>
+
+      <!-- Save Directory Button -->
+      <button id="chooseDir" class="px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600 transition">
+        Set Directory
+      </button>
+      <span id="feedback" class="text-sm text-gray-700 mt-2"></span>
+    </header>
+
+    <!-- Search Input -->
+    <div class="w-full max-w-xl mb-6">
+      <input
+        id="search"
+        type="text"
+        placeholder="Search for songs…"
+        class="w-full p-3 border rounded-lg shadow-sm focus:ring focus:ring-orange-300 outline-none"
+      />
+    </div>
+
+    <!-- Search Results -->
+    <div class="w-full max-w-xl mb-6">
+  <ul 
+    id="results" 
+    class="space-y-2 bg-white rounded-lg shadow-inner p-2 overflow-y-auto max-h-[28rem]"
+  ></ul>
+</div>
+
+    <!-- Toast -->
+    <div id="toast" class="fixed top-4 right-4 bg-green-500 text-white px-4 py-2 rounded opacity-0 transition-opacity"></div>
+
+    <!-- Renderer JS -->
+    <script src="renderer.js"></script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+{
+  "name": "soundcloud-downloader",
+  "version": "1.0.0",
+  "description": "A way to download SoundCloud music easily",
+  "homepage": "https://github.com/poppy221/soundclouddownloader#readme",
+  "bugs": {
+    "url": "https://github.com/poppy221/soundclouddownloader/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poppy221/soundclouddownloader.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^1.13.2",
+    "dotenv": "^17.2.3"
+  },
+  "devDependencies": {
+    "electron": "^39.2.6",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.poppy.soundclouddownloader",
+    "productName": "SoundCloud Downloader",
+    "directories": {
+      "output": "dist",
+      "buildResources": "assets"
+    },
+    "files": [
+      "main.js",
+      "renderer.js",
+      "download.js",
+      "search.js",
+      "index.html",
+      "styles.css",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  }
+}
