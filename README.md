@@ -35,7 +35,7 @@ To build the application yourself you'll need to install `node.js`:
 
 in terminal :
   ```
-  git clone https://github.com/poppy221/soundclouddownloader.git
+  git clone https://github.com/zapoppy/soundclouddownloader.git
   cd soundclouddownloader
   npm install
   npm run dist
